@@ -27,4 +27,18 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \avikarsha\datatable\AutoloadExample::widget(); ?>```
+<?php use avikarsha\datatable\DataTables; 
+    $searchModel = new ModelSearch();
+    $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+?>
+<?= DataTables::widget([
+    'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
+    'columns' => [
+        ['class' => 'yii\grid\SerialColumn'],
+ 
+        //columns
+ 
+        ['class' => 'yii\grid\ActionColumn'],
+    ],
+]);?>```
