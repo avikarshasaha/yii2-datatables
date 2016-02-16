@@ -1,6 +1,5 @@
-Datatable
-=========
-Datatable
+# yii2-datatables
+yii2-datatables
 
 Installation
 ------------
