@@ -45,7 +45,7 @@ class DataTables extends \avikarsha\grid\GridView
             $clientOptions["tableTools"]["sSwfPath"] = $tableTools->baseUrl."/swf/copy_csv_xls_pdf.swf";
         }
         $options = Json::encode($clientOptions);
-        $view->registerJs("var table = jQuery('#$id').DataTable($options);");
+        $view->registerJs("table = jQuery('#$id').DataTable($options);");
         
         //base list view run
         if ($this->showOnEmpty || $this->dataProvider->getCount() > 0) {
